@@ -6,4 +6,4 @@ Application dependencies are wired up in AppConfiguration. At this point the mai
 
 Once configuration is done, the container can be passed around the App (Or stored globally). Classes that needs dependencies can then rely on only the Protocol types and resolve their corrosponding Implementing instances using the container.
 
-Not sure what I would use this for, but here you go :<)
+Hopefully useful to someone, I've personally shied away from this favoring constructing dependencies using Coordinators or Factories in iOS :<)
