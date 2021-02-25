@@ -15,7 +15,7 @@ import os
 ///
 /// Singleton Dependencies: A new instance is provided the first time a service is requested. That instance is then persisted for the lifetime of the app.
 final class ServiceContainer: IServiceContainer {
-    private let logger = Logger(subsystem: "Core", category: "DI")
+    private let logger = Logger(subsystem: "Core", category: "Dependencies")
     private var transientDict: [String: TransientService] = [:]
     private var singletonDict: [String: SingletonService] = [:]
 
@@ -64,8 +64,8 @@ final class ServiceContainer: IServiceContainer {
             return singleton.getInstance() as! T
         }
 
-        logger.log(level: .fault, "tried to instantiate \(T.self) in the DI container, but failed. Check registrations")
-        print("tried to instantiate \(T.self) in the DI container, but failed. Check registrations")
+        logger.log(level: .fault, "tried to instantiate \(T.self) in the Service Container, but failed. Check registrations")
+        print("tried to instantiate \(T.self) in the Service Container, but failed. Check registrations")
         fatalError()
     }
 }
