@@ -47,9 +47,9 @@ final class ServiceContainer: IServiceContainer {
     ///
     /// - Returns: Implementing Instance of Type T
     func resolve<T>() -> T {
-        // Check if dependency exists in Transient Dictionairy
         let typeIdentifier = String(describing: T.self)
 
+        // Check if dependency exists in Transient Dictionairy 
         if let transient = transientDict[typeIdentifier] {
             return transient.getInstance(container: self) as! T
         }
