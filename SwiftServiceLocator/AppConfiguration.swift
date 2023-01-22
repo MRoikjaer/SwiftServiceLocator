@@ -1,9 +1,7 @@
 //
 //  AppConfiguration.swift
-//  Fleeki
 //
 //  Created by Mathias Roikjær on 18/05/2020.
-//  Copyright © 2020 Fleeki. All rights reserved.
 //
 
 import Foundation
